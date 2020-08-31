@@ -46,6 +46,7 @@ $ sudo ufw enable
 $ sudo ufw default allow incoming
 $ sudo ufw default allow outgoing
 # Make client server can access host server
+# sudo ufw allow from $ClientIP to any port nfs
 $ sudo ufw allow from 129.59.1.2 to any port nfs
 # Check ufw status
 $ sudo ufw status numbered
@@ -82,6 +83,9 @@ $ sudo dpkg -i /path/to/package.deb
 # Run docker without sudo
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
+
+#need to reboot to let it work
+$ sudo reboot
 
 # docker checkpoint is an experimental feature, so you should enable docker experimental feature
 $ sudo nano /etc/docker/daemon.json
