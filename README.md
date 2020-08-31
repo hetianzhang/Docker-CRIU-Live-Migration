@@ -96,6 +96,9 @@ $ sudo nano /etc/docker/daemon.json
 {
   "experimental":true
 }
+
+#restart docker to enable the experimental feature
+$ sudo systemctl restart docker
 ```
 ```sh
 # Then check whether experimental feature has been enabled:
